@@ -15,7 +15,8 @@ public class ImplicitWaitExample {
 		
 		WebDriver driver= new ChromeDriver();
 		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //deprecated
 		
 		driver.navigate().to("https://www.phptravels.net/login");
 		
